@@ -256,6 +256,8 @@ aaa;
 
 
     <h2>---------------------11 de Octubre de 2019-------------------------</h2>
+            </br>
+
             <?php
                 
                   error_reporting(E_ERROR );
@@ -285,6 +287,8 @@ aaa;
                  ?> 
       
         -------------------FOREACH-------------------------
+                </br>
+
                 <?php
                 error_reporting(E_ERROR );
                 $Nombres[0]='Jorge';
@@ -310,10 +314,41 @@ aaa;
                 //continuar la ejecución al comienzo de la siguiente iteración.
                 echo "Estais aprobados";//puesto que hemos puesto el continue nunca va a 
                 //llegar a esta linea de código
-                
                 }
             ?>
-          
+        
+        
+        ---------------SWITCH--------------------
+        </br>
+        <?php 
+                error_reporting(E_ERROR );
+                $Nombres[0]='Jorge';
+                $Nombres[1]='Agustín';
+                $Nombres[2]='Javier';
+                $Nombres[3]='Santiago';
+                //Si no se encuentra dentro de el array te pondra no se ha encontrado el nombre
+                
+                switch ($Nombres[0]):
+                    case "Jorge":
+                        echo "es Jorge";
+                        break;
+                    case "Agustín":
+                        echo "es Agostín";
+                        break;
+                    case "Santiago":
+                        echo "es Santiago";
+                        break;
+                    default :
+                        echo 'No se ha encontrado';
+                endswitch;
+          ?>
+        
+        
+        
+        
+       
+        
+        
         
     </body>
 </html>
