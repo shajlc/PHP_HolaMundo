@@ -343,7 +343,31 @@ aaa;
                 endswitch;
           ?>
         
+         --------------------PARAMETROS POR DEFECTO----------------------
+        </br>
+        <?php 
+                error_reporting(E_ERROR );
+                $nota1 =7;
+                $nota2 =10;
+                $resultado = suma ($nota1, $nota2);
+                echo $resultado. "<br>". $nota1. "<br>". $nota2;
+                
+                function suma ($n1, $n2){
+                $res= $n1+$n2;
+                $n1=5;
+                $nota2=2;
+                
+                return $res;
+                }
+          ?>
         
+        
+           ------------------------------------------
+        </br>
+        <?php 
+                error_reporting(E_ERROR );
+            
+          ?>
         
         
        
