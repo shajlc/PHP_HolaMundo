@@ -284,7 +284,36 @@ aaa;
                  }
                  ?> 
       
-        
+        -------------------FOREACH-------------------------
+                <?php
+                error_reporting(E_ERROR );
+                $Nombres[0]='Jorge';
+                $Nombres[1]='Agustín';
+                $Nombres[2]='Javier';
+                $Nombres[3]='Santiago';
+                echo "<b>Bucle clásico</b><br/>";
+                //Utilizamos el count en el for si no nos acordamos 
+                //de cual es la longitud del array
+                for ($i = 0; $i < count($Nombres); $i++)
+                {
+                echo "Un autor de este libro se llama:<b> $Nombres[$i]</b>",
+                "<br/>";
+                }
+                echo "<b>Bucle foreach</b><br/>";
+                foreach ($Nombres as $autor){
+                echo "Un autor de este libro se llama:<b> $autor</b><br/>";
+                //La variable $autor, toma el valor de cada uno 
+                //de los elementos del array $Nombre.
+                continue;
+                //continue se usa dentro de la estructura del bucle para 
+                //saltar el resto de la iteración actual del bucle y 
+                //continuar la ejecución al comienzo de la siguiente iteración.
+                echo "Estais aprobados";//puesto que hemos puesto el continue nunca va a 
+                //llegar a esta linea de código
+                
+                }
+            ?>
+          
         
     </body>
 </html>
